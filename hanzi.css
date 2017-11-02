@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#main {
+    width: 750px;
+    margin: 0 auto;
+}
+
+#addWordDialog {
+    display: none;
+    position: fixed;
+    font-size:12px;
+    top: 10%;
+    left: 20%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: #cfe8f8;
+    border: #74abc6 solid 1px;
+    padding: 2px 2px 2px 2px;
+}
+
+#addWordDialog h2 {
+    float: left;
+}
+
+#addWordDialog h3 {
+    float: right;
+}
+
+#addWordDialog h2, #addWordDialog h3 {
+    margin: 3px;
+    padding: 0;
+    color:#345e7d;
+    font-weight:bold;
+    font-size: 18px;
+}
+
+#addWordForm {
+    clear: both;
+    background-color: #ffffff;
+    border: #74abc6 solid 1px;
+    padding: 5px;
+}
+
+#addWordForm label, #selectTags {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+#addWordForm input {
+    width: 260px;
+}
+
+#addWordForm textarea {
+    width: 260px;
+}
+
+#addWordForm #wordSubmit, #addWordForm #wordReset {
+    display: inline-block;
+    height: 30px;
+    width: 70px;
+    font-size: 18px;
+    font-weight: bold;
+    /* left margin 和 right margin 在代码中设置 */
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+
+#closeAddWordDialog:hover {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#wordbook {
+    border: thin solid lightblue;
+    border-collapse: collapse;
+    /* width: 800px; */
+    width: 100%;
+}
+
+#wordbook th, #wordbook td {
+    border: thin solid lightblue;
+    padding: 2px;
+    text-align: left;
+}
+
+#wordbook tr:nth-child(even) {
+    background-color: lightgreen;
+}
+
+#wordbook tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+#openAddWordDialog, #openAddWordDialog:hover {
+    line-height:25px;
+    height:25px;
+    width:56px;
+    /* vertical-align:middle; */
+    text-align: right;
+    display:inline-block;
+    background: url("images/plus.png") 5px 4px no-repeat;
+    padding-right: 3px;
+    border: none;
+}
+
+#openAddWordDialog:hover {
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+}
+
+.wordEdit, .wordDelete {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#pageInfo {
+    display: table;
+    margin: 10px auto 0 auto;
+}
+
+#inputPage {
+    width: 30px;
+    display: none;
+    margin: 0 5px;
+}
+
+#inputPage, #inputButton {
+    display: none;
+}
+
