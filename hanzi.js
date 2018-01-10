@@ -2,7 +2,7 @@ window.onload = init;
 
 // 添加单词还是修改单词
 var isAdd = true;
-// 是否需要刷新单词本。在添加但此时，可以连续添加。为避免频繁刷新页面，只有在退出添加单词 form 时才刷新单词本
+// 是否需要刷新单词本。在添加单词时，可以连续添加。为避免频繁刷新页面，只有在退出添加单词 form 时才刷新单词本。
 var toBeRefreshed = true;
 
 function init() {
@@ -79,7 +79,7 @@ function init() {
         var number = inputPage.value;
         var regex = /^[0-9]+$/;
         if (!number.match(regex)) {
-            alert("请输入一个整数。例如：3,88,102");
+            alert("请输入一个整数。例如：3, 88, 102");
             return false;
         }
         inputPage.value = "";
@@ -269,7 +269,7 @@ function submitWord() {
         word: word,
         phonetic: phonetic,
         wordnote: wordnote,
-        tags: tags.split(","), //还需要检验：是否为空，时候前后有空白等等。
+        tags: tags.split(","), //还需要检验：是否为空，是否前后有空白等等。
         timeStamp: timeStamp
     };
 

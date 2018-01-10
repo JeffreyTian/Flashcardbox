@@ -1,7 +1,11 @@
 function databaseObject() {
+    // 如果在函数体外创建 dbObj 对象，所有的变量都会变成 global，容易引起命名冲突。
+    // 现在把 dbObj 对象的创建放在函数体内，创建完后再通过 return 语句交给调用者。这样，
+    // 只有 dbObj 对象及 dbObj 对象的属性是可见的，创建过程中使用的变量都是不可见的。
     var dbObj = {
         name: "MyNoteBook",
         version: 1,
+        // 公共错误处理函数
         onerror: function() {
             console.log("数据库操作错误发生了...");
             console.dir(e);
@@ -16,7 +20,7 @@ function databaseObject() {
 
         dbRequest.onerror = dbObj.handleError;
 
-        dbRequest.onupgradeneeded = function(event){
+        dbRequest.onupgradeneeded = function(event) {
             console.log("数据库正在更新......");
 
             var db = event.target.result;
